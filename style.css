@@ -1,10 +1,11 @@
 body{
     margin: 0;
     overflow-x: hidden;
+    font-family: 'Manrope', sans-serif;
 }
 
 #hero{
-    height:100vw;
+    height:100vh;
     background-image: url("photos/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,28 +13,66 @@ body{
     background-attachment: fixed;
 }
 
+#contact-header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab {
+    border: solid 1px black;
+    width: 50vw;
+    text-align: center;
+}
+
+
 .nav-wrap{
     background-color: rgba(255,255,255, 0.8);
     overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
+    padding: 14px 16px;
     height: 10vh;
-    align-items: center;
     padding: 0 10vw 0 10vw;
 }
-.nav-item {
-    font-family: 'Manrope', sans-serif;
-    flex-grow: 1;
+.nav-wrap a {
+    display:block;
     color: #35605A;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    float: left;
 }
 
 .nav-wrap .icon {
     display: none;
+}
+
+.services{
+    margin: 0;
+    padding: 0;
+}
+
+#card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+}
+#social-sticky{
+    position: fixed;
+    top: 25%;
+    margin-left: 2%;
+}
+#social-sticky a:not(:first-child) {display: none;}
+
+#social-sticky a:hover ~ a{
+    display:block;
+}
+
+footer {
+    background-color: #4D4847;
+    height: 10vh;
 }
 
 
@@ -47,7 +86,7 @@ body{
 
 @media screen and (max-width: 600px) {
     .nav-wrap.responsive {position: relative;}
-    .nav-wrap.responsive a.icon {
+    .nav-wrap.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
